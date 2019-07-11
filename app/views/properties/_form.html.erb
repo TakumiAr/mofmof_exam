@@ -1,0 +1,19 @@
+<%= form_for @property do |form| %>
+  物件名<br>
+  <%= form.text_field :name %><br>
+
+  賃料<br>
+  <%= form.text_field :rent %>円<br>
+
+  住所<br>
+  <%= form.text_field :address %><br>
+
+  築年数<br>
+  <%= form.text_field :age %>年<br>
+
+  備考<br>
+  <%= form.text_field :remark, size: 25 %><br>
+  <%= form.submit("登録する") %><br>
+<% end %>
+
+<%= link_to '戻る', properties_path %>
