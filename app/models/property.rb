@@ -1,15 +1,8 @@
 class Property < ApplicationRecord
   has_many :stations
   accepts_nested_attributes_for :stations
-  with_options presence: true do
-    validates :name
-    validates :rent
-    validates :age
-    validates :address
-  end
-
-  with_options numericality: true do
-    validates :rent
-    validates :age
-  end
+  validates :name, presence: true
+  validates :rent, presence: true, numericality: true
+  validates :age, presence: true, numericality: true
+  validates :address, presence: true
 end
