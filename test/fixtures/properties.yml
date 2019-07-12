@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyText
+  rent: 1
+  age: 1
+  remark: MyText
+
+two:
+  name: MyText
+  rent: 1
+  age: 1
+  remark: MyText

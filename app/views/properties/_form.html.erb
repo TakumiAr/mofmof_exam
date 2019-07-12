@@ -1,0 +1,48 @@
+<%= form_for @property do |form| %>
+  <% if @property.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= @property.errors.count %>件のエラーがあります。 </h2>
+      <ul>
+        <% @property.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+<% end %>
+
+<% count = 0 %>
+<%= form_for @property do |form| %>
+  <div class="property_post">
+    物件名<br>
+    <%= form.text_field :name %><br>
+
+    賃料<br>
+    <%= form.text_field :rent %>円<br>
+
+    住所<br>
+    <%= form.text_field :address %><br>
+
+    築年数<br>
+    <%= form.text_field :age %>年<br>
+
+    備考<br>
+    <%= form.text_area :remark %><br>
+  </div>
+  <div class="station_post">
+    <%= form.fields_for :stations do |form| %>
+      <h3>最寄り駅<%= count = count + 1; %></h3>
+      路線名<br>
+      <%= form.text_field :route %><br>
+
+      駅名<br>
+      <%= form.text_field :name %><br>
+
+      徒歩分数<br>
+      <%= form.text_field :on_foot %>分<br>
+    <% end %>
+  </div>
+  <div class="actions">
+    <%= form.submit("登録する") %>
+  </div>
+<% end %>
