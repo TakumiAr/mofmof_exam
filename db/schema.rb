@@ -10,12 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190711041821) do
+ActiveRecord::Schema.define(version: 20190711080406) do
 
   create_table "properties", force: :cascade do |t|
     t.text     "name"
-    t.integer  "rent"
-    t.integer  "age"
+    t.text     "rent"
+    t.text     "age"
     t.text     "remark"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 20190711041821) do
   create_table "stations", force: :cascade do |t|
     t.text     "route"
     t.text     "name"
-    t.integer  "on_foot"
+    t.text     "on_foot"
     t.integer  "property_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
