@@ -6,7 +6,6 @@ class Property < ApplicationRecord
     validates :rent
     validates :age
     validates :address
-    validates :remark
   end
 
   with_options numericality: true do

@@ -13,7 +13,7 @@ class PropertiesController < ApplicationController
   def create
     @property = Property.new(property_params)
     if @property.save
-      redirect_to new_property_path
+      redirect_to properties_path
     else
       render 'new'
     end
