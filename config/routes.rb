@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
   resources :properties
   resources :stations
-  get '', to: 'properties#index'
+  root to: 'properties#index'
 end
